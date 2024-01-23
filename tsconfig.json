@@ -13,6 +13,6 @@
       "strictNullChecks": true,
       "strictFunctionTypes": true
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx"],
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/routes"],
     "exclude": ["node_modules"]
 }
