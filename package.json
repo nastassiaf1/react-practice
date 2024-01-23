@@ -10,14 +10,13 @@
   "dependencies": {
     "@types/jest": "^29.5.11",
     "@types/node": "^20.11.5",
-    "http-server": "^14.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.3.3"
   },
   "scripts": {
-    "start": "node esbuild.mjs && http-server ./ -p 3000 -a localhost",
-    "build": "node esbuild.mjs"
+    "build": "esbuild src/index.tsx --outdir=dist --bundle",
+    "dev": "npm run build -- --watch --servedir='./' --serve=3000 --loader:.tsx=tsx"
   },
   "eslintConfig": {
     "extends": [
